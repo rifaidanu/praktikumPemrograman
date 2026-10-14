@@ -1,5 +1,6 @@
-from datetime import date                  
+# Proses Pengembalian (Vicko)
 
+from datetime import date                  
 DAFTAR_KONDISI = ["baik", "rusak ringan", "rusak berat"]  
 
 def proses_pengembalian(lab, id_transaksi, kode_alat, kondisi):
