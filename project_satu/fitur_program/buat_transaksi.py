@@ -99,5 +99,5 @@ def menu_buat_transaksi(lab):
         lama = int(input("Lama peminjaman (1-7 hari): "))
         t = buat_transaksi(lab, nim, daftar_kode, lama)
         print("Berhasil! ID transaksi:", t.id_transaksi, "| Batas kembali:", t.batas_pengembalian)
-    except ValueError as e:                               # tangkap semua pesan kesalahan
+    except ValueError as e:                               
         print("Gagal:", e)
