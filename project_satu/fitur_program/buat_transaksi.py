@@ -1,17 +1,19 @@
-from datetime import date, timedelta   # date = tanggal hari ini, timedelta = selisih hari
+# Buat Transaksi (Vicko)
+
+from datetime import date, timedelta   
 
 
 class ItemPeminjaman:
     def __init__(self, alat):
-        self.alat = alat                  # objek Peralatan yang dipinjam
-        self.sudah_kembali = False        # awalnya belum dikembalikan
-        self.tanggal_kembali = None       # terisi saat dikembalikan
-        self.kondisi_kembali = None       # terisi saat dikembalikan
+        self.alat = alat                  
+        self.sudah_kembali = False        
+        self.tanggal_kembali = None       
+        self.kondisi_kembali = None       
 
     def tandai_kembali(self, kondisi, tanggal):
-        self.sudah_kembali = True         # tandai sudah kembali
-        self.tanggal_kembali = tanggal    # catat tanggal kembali
-        self.kondisi_kembali = kondisi    # catat kondisi saat kembali
+        self.sudah_kembali = True         
+        self.tanggal_kembali = tanggal    
+        self.kondisi_kembali = kondisi    
 
 
 class Transaksi:
@@ -92,7 +94,7 @@ def buat_transaksi(lab, nim, daftar_kode_alat, lama_hari):
 def menu_buat_transaksi(lab):
     nim = input("NIM mahasiswa: ").strip()
     teks = input("Kode alat (pisahkan dengan koma): ")
-    daftar_kode = [k.strip() for k in teks.split(",") if k.strip()]   # rapikan input
+    daftar_kode = [k.strip() for k in teks.split(",") if k.strip()]  
     try:
         lama = int(input("Lama peminjaman (1-7 hari): "))
         t = buat_transaksi(lab, nim, daftar_kode, lama)
