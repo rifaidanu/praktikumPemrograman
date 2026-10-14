@@ -1,8 +1,6 @@
 # Buat Transaksi (Vicko)
 
 from datetime import date, timedelta   
-
-
 class ItemPeminjaman:
     def __init__(self, alat):
         self.alat = alat                  
@@ -14,7 +12,6 @@ class ItemPeminjaman:
         self.sudah_kembali = True         
         self.tanggal_kembali = tanggal    
         self.kondisi_kembali = kondisi    
-
 
 class Transaksi:
     def __init__(self, id_transaksi, mahasiswa, daftar_item, tanggal_peminjaman, batas_pengembalian):
