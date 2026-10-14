@@ -9,11 +9,19 @@ if TYPE_CHECKING:
 
 def menu_tampilkan_alat_rusak(lab: 'LabManager') -> None:
     """
-    Fungsi untuk menampilkan daftar semua peralatan yang berkondisi rusak (rusak ringan / berat).
+    Fungsi untuk menampilkan daftar alat dengan kondisi RUSAK RINGAN
+    atau RUSAK BERAT.
     Parameter:
         lab (LabManager): Instance utama pengelola laboratorium
     """
     print("\n=== DAFTAR ALAT RUSAK ===")
-    # TODO: Anggota tim dapat mengimplementasikan tampilan alat rusak di sini:
-    # - lab.tampilkan_alat_rusak()
-    pass
+    daftar_alat = lab.tampilkan_alat_rusak()
+
+    if not daftar_alat:
+        print("Tidak ada alat yang rusak.")
+        return
+
+    for nomor, alat in enumerate(daftar_alat, start=1):
+        print(f"{nomor}. [{alat.kode_alat}] {alat.nama} | "
+              f"Kategori: {alat.kategori} | Kondisi: {alat.kondisi.value}")
+    print(f"\nTotal: {len(daftar_alat)} alat rusak.")
