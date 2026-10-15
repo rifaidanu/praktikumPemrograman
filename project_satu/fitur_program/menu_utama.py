@@ -13,6 +13,7 @@ from .tampilkan_alat_tersedia import menu_tampilkan_alat_tersedia
 from .tampilkan_alat_dipinjam import menu_tampilkan_alat_dipinjam
 from .tampilkan_alat_rusak import menu_tampilkan_alat_rusak
 from .riwayat_mahasiswa import menu_riwayat_mahasiswa
+from .statistik_peminjaman import menu_statistik_peminjaman
 
 
 def tampilkan_menu_utama(lab: LabManager) -> None:
@@ -31,10 +32,11 @@ def tampilkan_menu_utama(lab: LabManager) -> None:
         print(" 8. Tampilkan Alat yang Sedang Dipinjam")
         print(" 9. Tampilkan Alat yang Rusak")
         print("10. Tampilkan Riwayat Peminjaman Mahasiswa")
+        print("11. Tampilkan Statistik Peminjaman (Tantangan B)")
         print(" 0. Keluar dari Program")
         print("=" * 55)
 
-        pilihan = input("Pilih menu [0-10]: ").strip()
+        pilihan = input("Pilih menu [0-11]: ").strip()
 
         if pilihan == "1":
             menu_kelola_mahasiswa(lab)
@@ -56,8 +58,11 @@ def tampilkan_menu_utama(lab: LabManager) -> None:
             menu_tampilkan_alat_rusak(lab)
         elif pilihan == "10":
             menu_riwayat_mahasiswa(lab)
+        elif pilihan == "11":
+            menu_statistik_peminjaman(lab)
         elif pilihan == "0":
             print("\nTerima kasih telah menggunakan sistem peminjaman laboratorium!")
             break
         else:
-            print("❌ Pilihan tidak valid. Silakan masukkan angka antara 0 - 10.")
+            print("❌ Pilihan tidak valid. Silakan masukkan angka antara 0 - 11.")
+
