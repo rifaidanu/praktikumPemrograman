@@ -10,5 +10,6 @@ if TYPE_CHECKING:
 def menu_tampilkan_alat_tersedia(lab: 'LabManager') -> None:
     alat_tersedia = lab.tampilkan_alat_tersedia()
 
-    for i in alat_tersedia:
-        print(i)
+    print("----------- Alat Tersedia -----------")
+    for alat in alat_tersedia:
+        print(f"{alat.kode_alat} | {alat.nama}")
