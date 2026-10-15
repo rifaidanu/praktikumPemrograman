@@ -1,6 +1,4 @@
-"""
-Modul Fitur 10: Tampilkan Riwayat Peminjaman Mahasiswa
-"""
+
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
@@ -8,12 +6,6 @@ if TYPE_CHECKING:
 
 
 def menu_riwayat_mahasiswa(lab: 'LabManager') -> None:
-    """
-    Fungsi untuk menampilkan seluruh riwayat transaksi (aktif dan selesai)
-    milik satu mahasiswa berdasarkan NIM.
-    Parameter:
-        lab (LabManager): Instance utama pengelola laboratorium
-    """
     print("\n=== RIWAYAT PEMINJAMAN MAHASISWA ===")
     nim = input("Masukkan NIM mahasiswa: ").strip()
 

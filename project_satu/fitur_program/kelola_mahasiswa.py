@@ -1,7 +1,3 @@
-# =========================================================
-# FITUR 1: KELOLA DATA MAHASISWA (Tugas Tama)
-# =========================================================
-
 def kelola_mahasiswa(lab):
     """
     Submenu interaktif untuk pengelolaan data mahasiswa (CRUD).
@@ -20,10 +16,7 @@ def kelola_mahasiswa(lab):
         print("=" * 45)
         
         pilihan = input("Pilih menu (0-5): ").strip()
-        
-        # --------------------------------------------------
-        # 1. TAMBAH MAHASISWA
-        # --------------------------------------------------
+
         if pilihan == "1":
             print("\n--- TAMBAH MAHASISWA BARU ---")
             nim = input("Masukkan NIM      : ").strip().upper()
@@ -36,9 +29,6 @@ def kelola_mahasiswa(lab):
             except ValueError as e:
                 print(f"[ERROR] {e}")
 
-        # --------------------------------------------------
-        # 2. EDIT MAHASISWA
-        # --------------------------------------------------
         elif pilihan == "2":
             print("\n--- EDIT DATA MAHASISWA ---")
             nim = input("Masukkan NIM Mahasiswa yang ingin diedit: ").strip().upper()
@@ -53,7 +43,6 @@ def kelola_mahasiswa(lab):
             nama_baru = input("Nama Baru (tekan Enter jika tidak diubah) : ").strip().title()
             hp_baru = input("No HP Baru (tekan Enter jika tidak diubah): ").strip()
             
-            # Jika user tidak menginputkan apa-apa, pakai data lama
             nama_final = nama_baru if nama_baru else mhs_lama.nama
             hp_final = hp_baru if hp_baru else mhs_lama.nomor_hp
             
@@ -63,9 +52,6 @@ def kelola_mahasiswa(lab):
             except ValueError as e:
                 print(f"[ERROR] {e}")
 
-        # --------------------------------------------------
-        # 3. HAPUS MAHASISWA
-        # --------------------------------------------------
         elif pilihan == "3":
             print("\n--- HAPUS DATA MAHASISWA ---")
             nim = input("Masukkan NIM Mahasiswa yang akan dihapus: ").strip().upper()
@@ -76,9 +62,6 @@ def kelola_mahasiswa(lab):
             except ValueError as e:
                 print(f"[ERROR] {e}")
 
-        # --------------------------------------------------
-        # 4. CARI MAHASISWA
-        # --------------------------------------------------
         elif pilihan == "4":
             print("\n--- CARI MAHASISWA ---")
             keyword = input("Masukkan Keyword (NIM / Nama): ").strip()
@@ -94,9 +77,7 @@ def kelola_mahasiswa(lab):
             else:
                 print(f"[INFO] Tidak ada data mahasiswa yang cocok dengan '{keyword}'.")
 
-        # --------------------------------------------------
-        # 5. TAMPILKAN SELURUH MAHASISWA
-        # --------------------------------------------------
+
         elif pilihan == "5":
             print("\n--- DAFTAR SELURUH MAHASISWA ---")
             daftar_mhs = list(lab.mahasiswa.values())
@@ -112,9 +93,6 @@ def kelola_mahasiswa(lab):
             else:
                 print("[INFO] Belum ada data mahasiswa terdaftar.")
 
-        # --------------------------------------------------
-        # 0. KEMBALI
-        # --------------------------------------------------
         elif pilihan == "0":
             break
         else:

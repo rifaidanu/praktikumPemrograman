@@ -8,12 +8,6 @@ if TYPE_CHECKING:
 
 
 def menu_tampilkan_alat_rusak(lab: 'LabManager') -> None:
-    """
-    Fungsi untuk menampilkan daftar alat dengan kondisi RUSAK RINGAN
-    atau RUSAK BERAT.
-    Parameter:
-        lab (LabManager): Instance utama pengelola laboratorium
-    """
     print("\n=== DAFTAR ALAT RUSAK ===")
     daftar_alat = lab.tampilkan_alat_rusak()
 

@@ -1,13 +1,6 @@
-# =========================================================
-# FITUR 2: KELOLA DATA ALAT LABORATORIUM (Tugas Tama)
-# =========================================================
 from models.enums import KondisiAlat
 
 def kelola_alat(lab):
-    """
-    Submenu interaktif untuk pengelolaan data alat laboratorium (CRUD).
-    Menerima parameter `lab` yang merupakan instance dari LabManager.
-    """
     while True:
         print("\n" + "=" * 50)
         print("          SUBMENU KELOLA DATA ALAT LAB        ")
@@ -22,9 +15,6 @@ def kelola_alat(lab):
         
         pilihan = input("Pilih menu (0-5): ").strip()
         
-        # --------------------------------------------------
-        # 1. TAMBAH ALAT
-        # --------------------------------------------------
         if pilihan == "1":
             print("\n--- TAMBAH ALAT LAB BARU ---")
             kode_alat = input("Masukkan Kode Alat (misal ALT-001): ").strip().upper()
@@ -49,9 +39,6 @@ def kelola_alat(lab):
             except ValueError as e:
                 print(f"[ERROR] {e}")
 
-        # --------------------------------------------------
-        # 2. EDIT ALAT
-        # --------------------------------------------------
         elif pilihan == "2":
             print("\n--- EDIT DATA ALAT LAB ---")
             kode_alat = input("Masukkan Kode Alat yang ingin diedit: ").strip().upper()
@@ -86,9 +73,6 @@ def kelola_alat(lab):
             except ValueError as e:
                 print(f"[ERROR] {e}")
 
-        # --------------------------------------------------
-        # 3. HAPUS ALAT
-        # --------------------------------------------------
         elif pilihan == "3":
             print("\n--- HAPUS DATA ALAT LAB ---")
             kode_alat = input("Masukkan Kode Alat yang akan dihapus: ").strip().upper()
@@ -99,9 +83,7 @@ def kelola_alat(lab):
             except ValueError as e:
                 print(f"[ERROR] {e}")
 
-        # --------------------------------------------------
-        # 4. CARI ALAT
-        # --------------------------------------------------
+
         elif pilihan == "4":
             print("\n--- CARI ALAT LAB ---")
             keyword = input("Masukkan Keyword (Kode / Nama / Kategori): ").strip()
@@ -117,9 +99,6 @@ def kelola_alat(lab):
             else:
                 print(f"[INFO] Tidak ada alat yang cocok dengan '{keyword}'.")
 
-        # --------------------------------------------------
-        # 5. TAMPILKAN SELURUH ALAT
-        # --------------------------------------------------
         elif pilihan == "5":
             print("\n--- DAFTAR SELURUH ALAT LAB ---")
             daftar_alat = list(lab.alat.values())
@@ -135,9 +114,6 @@ def kelola_alat(lab):
             else:
                 print("[INFO] Belum ada data alat terdaftar.")
 
-        # --------------------------------------------------
-        # 0. KEMBALI
-        # --------------------------------------------------
         elif pilihan == "0":
             break
         else:

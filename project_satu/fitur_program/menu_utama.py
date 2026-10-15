@@ -3,11 +3,11 @@ Modul Menu Utama: Penghubung (Router) antar fitur program
 """
 from services.lab_manager import LabManager
 
-from .kelola_mahasiswa import menu_kelola_mahasiswa
-from .kelola_alat import menu_kelola_alat
+from .kelola_mahasiswa import kelola_mahasiswa as menu_kelola_mahasiswa
+from .kelola_alat import kelola_alat as menu_kelola_alat
 from .buat_transaksi import menu_buat_transaksi
 from .tampilkan_transaksi import menu_tampilkan_transaksi
-from .proses_pengembalian import menu_proses_pengembalian
+from .proses_pengembalian import menu_pengembalian as menu_proses_pengembalian
 from .cari_transaksi import menu_cari_transaksi
 from .tampilkan_alat_tersedia import menu_tampilkan_alat_tersedia
 from .tampilkan_alat_dipinjam import menu_tampilkan_alat_dipinjam

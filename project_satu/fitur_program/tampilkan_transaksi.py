@@ -1,5 +1,3 @@
-# Tampilkan Transaksi (Vicko)
-
 def tampilkan_transaksi(lab):
     if len(lab.transaksi) == 0:                         
         print("Belum ada transaksi.")

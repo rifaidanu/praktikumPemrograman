@@ -1,6 +1,3 @@
-"""
-Modul Fitur 8: Tampilkan Alat yang Sedang Dipinjam
-"""
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
@@ -8,12 +5,6 @@ if TYPE_CHECKING:
 
 
 def menu_tampilkan_alat_dipinjam(lab: 'LabManager') -> None:
-    """
-    Fungsi untuk menampilkan daftar alat yang berstatus DIPINJAM,
-    lengkap dengan peminjam dan batas pengembalian.
-    Parameter:
-        lab (LabManager): Instance utama pengelola laboratorium
-    """
     print("\n=== DAFTAR ALAT SEDANG DIPINJAM ===")
     daftar_alat = lab.tampilkan_alat_dipinjam()
 
