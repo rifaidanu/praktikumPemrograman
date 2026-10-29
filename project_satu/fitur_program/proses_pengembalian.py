@@ -20,9 +20,9 @@ def proses_pengembalian(lab, id_transaksi, kode_alat, kondisi):
         
 def menu_pengembalian(lab):
     id_t = input("ID transaksi: ").upper()
-    kode = input("Kode alat yang dikembalikan: ").strip()
+    kode = input("Kode alat yang dikembalikan: ")
     print("Kondisi: 1. Baik  2. Rusak ringan  3. Rusak berat")
-    pilihan = input("Pilih (1/2/3): ").strip()
+    pilihan = input("Pilih (1/2/3): ")
     daftar_pilihan = {                                
         "1": "baik",
         "2": "rusak ringan",
