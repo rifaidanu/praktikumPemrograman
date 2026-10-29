@@ -19,7 +19,7 @@ def proses_pengembalian(lab, id_transaksi, kode_alat, kondisi):
         lab.catat_log("Transaksi " + id_transaksi + " selesai")
         
 def menu_pengembalian(lab):
-    id_t = input("ID transaksi: ").strip().upper()
+    id_t = input("ID transaksi: ").upper()
     kode = input("Kode alat yang dikembalikan: ").strip()
     print("Kondisi: 1. Baik  2. Rusak ringan  3. Rusak berat")
     pilihan = input("Pilih (1/2/3): ").strip()
